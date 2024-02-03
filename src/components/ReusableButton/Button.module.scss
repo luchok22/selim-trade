@@ -1,0 +1,21 @@
+@import "../../app/globalVariables.scss";
+.button {
+  display: flex;
+  border-radius: 20px;
+  width: fit-content;
+  cursor: pointer;
+  align-items: center;
+  padding: 13px 41px;
+  gap: 25px;
+  background: linear-gradient(
+    to right,
+    $color1 0%,
+    $color1 100%,
+    $color2 100%,
+    $color2 100%
+  );
+    color: $white;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+}
