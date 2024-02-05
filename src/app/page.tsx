@@ -5,8 +5,10 @@ import ReusableComponent from "@/components/ReusableComponent/ReusableComponent"
 export default function Home() {
   return (
     <>
-      <OurTeam />
-      <Offers /> 
+      <ReusableComponent title=" ">
+        <OurTeam />
+        <Offers />
+      </ReusableComponent>
     </>
   );
 }

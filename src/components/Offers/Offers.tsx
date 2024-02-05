@@ -9,11 +9,11 @@ import img5 from "/src/assets/Offers/image_5.jpg";
 
 const Offers = () => {
   return (
-    <div className={scss.ofers_bg}>
+    <div className={scss.offers_bg}>
       <div className="container">
-        <h2 className={scss.ourTeam__text}>Мы предлагаем</h2>
         <div className={scss.images}>
-          <div className="img-col_left">
+          <h2 className={scss.offers_title}>Мы предлагаем</h2>
+          <div className={scss.img_col_left}>
             <Image
               src={img1}
               alt="img"
@@ -21,6 +21,9 @@ const Offers = () => {
               height={250}
               className={scss.img1}
             />
+            <div className={scss.btn_section}>
+              <a href="/">Секционные</a>
+            </div>
             <Image
               src={img3}
               alt="img"
@@ -28,8 +31,11 @@ const Offers = () => {
               height={250}
               className={scss.img2}
             />
+            <div className={scss.btn_section}>
+              <a href="/">Распашные</a>
+            </div>
           </div>
-          <div className="img-col_center">
+          <div className={scss.img_col_center}>
             <Image
               src={img2}
               alt="img"
@@ -37,6 +43,9 @@ const Offers = () => {
               height={258}
               className={scss.img3}
             />
+            <div className={scss.btn_section}>
+              <a href="/">Автоматика</a>
+            </div>
             <Image
               src={img4}
               alt="img"
@@ -44,8 +53,11 @@ const Offers = () => {
               height={258}
               className={scss.img4}
             />
+            <div className={scss.btn_section}>
+              <a href="/">Складные</a>
+            </div>
           </div>
-          <div className="img-col_right">
+          <div className={scss.img_col_right}>
             <Image
               src={img5}
               alt="img"
@@ -53,7 +65,13 @@ const Offers = () => {
               height={544}
               className={scss.img5}
             />
+            <div className={scss.btn_section}>
+              <a href="/">Роль ворота</a>
+            </div>
           </div>
+        </div>
+        <div className="btn_blue">
+          <button className={scss.see_all}>Смотреть все</button>
         </div>
       </div>
     </div>
