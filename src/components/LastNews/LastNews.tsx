@@ -20,7 +20,7 @@ const LastNews = () => {
       text: "СНИЖЕНИЕ ЦЕН НА ОСНОВНУЮ ЛИНЕЙКУ АВТОМАТИКИ DOORHAN",
     },
   ];
-  const dataLastNews1 = useMemo(
+  const renderData = useMemo(
     () =>
       dataLastNews.map((item, index) => (
         <div key={index} className={scss.lastNews__images}>
@@ -37,7 +37,7 @@ const LastNews = () => {
   return (
     <div className={scss.lastNews__container}>
       <h3>Последние новости</h3>
-      <div className={scss.lastNews__bloc}>{dataLastNews1}</div>
+      <div className={scss.lastNews__bloc}>{renderData}</div>
       <button>все новости</button>
     </div>
   );
