@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import scss from "./Service.module.scss";
 import Image from "next/image";
 import icon1 from "../../assets/servis/servis1.svg";
@@ -26,18 +26,21 @@ const Service = () => {
       icon: icon4,
     },
   ];
+  const iconData = useMemo(
+    () =>
+      serviceData.map((item, index) => (
+        <div key={index} className={scss.service__card}>
+          <Image src={item.icon} alt="icon" width={50} height={50} />
+          <p>{item.title}</p>
+        </div>
+      )),
+    []
+  );
 
   return (
     <div className={scss.service__container}>
       <h3>Сервис</h3>
-      <div className={scss.service__blok}>
-        {serviceData.map((item, index) => (
-          <div key={index} className={scss.service__card}>
-            <Image src={item.icon} alt="icon" width={50} height={50} />
-            <p>{item.title}</p>
-          </div>
-        ))}
-      </div>
+      <div className={scss.service__blok}>{iconData}</div>
     </div>
   );
 };
