@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Advantages.module.scss";
 import Image from "next/image";
+import ReusableComponent from "@/components/ReusableComponent/ReusableComponent";
 import logo1 from "../../assets/Advantages/logo1.png";
 import logo2 from "../../assets/Advantages/logo2.png";
 import logo3 from "../../assets/Advantages/logo3.png";
@@ -9,9 +10,8 @@ import logo5 from "../../assets/Advantages/logo5.png";
 const Advantages = () => {
   return (
     <div className={style.advantages}>
-      <div className="container">
+       <ReusableComponent title={"Наши преимущества"}>
         <div className={style.advantages__text } >
-          {/* <h2>Наши преимущества</h2> */}
           <div className={style.advantages__text_desc }>
             <ul>
               <li>
@@ -47,7 +47,7 @@ const Advantages = () => {
             </ul>
           </div>
         </div>
-      </div>
+        </ReusableComponent>
     </div>
   );
 };
