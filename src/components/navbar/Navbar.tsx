@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useMemo } from "react";
 import scss from "./Navbar.module.scss";
 import logo from "../../assets/navbar/logo.svg";
 import Link from "next/link";
@@ -11,6 +11,15 @@ const Navbar: FC = () => {
     { title: "новости", url: "/news" },
     { title: "наши работы", url: "/WeWork" },
   ];
+  const menuItemsMap = useMemo(
+    () =>
+      menuItems.map((item, index) => (
+        <li key={index}>
+          <Link href={item.url}>{item.title}</Link>
+        </li>
+      )),
+    []
+  );
 
   return (
     <nav className={scss.nav}>
@@ -18,13 +27,7 @@ const Navbar: FC = () => {
         <div className={scss.nav__container}>
           <Image src={logo} alt="logo" width={100} />
 
-          <ul className={scss.nav__ul}>
-            {menuItems.map((item, index) => (
-              <li key={index}>
-                <Link href={item.url}>{item.title}</Link>
-              </li>
-            ))}
-          </ul>
+          <ul className={scss.nav__ul}>{menuItemsMap}</ul>
 
           <div className={scss.nav__adress}>
             <p>г. Бишкек</p>

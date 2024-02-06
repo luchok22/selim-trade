@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import scss from "./LastNews.module.scss";
 import image1 from "../../assets/lastNews/Rectangle1.png";
 import image2 from "../../assets/lastNews/Rectangle2.png";
@@ -20,21 +20,24 @@ const LastNews = () => {
       text: "СНИЖЕНИЕ ЦЕН НА ОСНОВНУЮ ЛИНЕЙКУ АВТОМАТИКИ DOORHAN",
     },
   ];
+  const dataLastNews1 = useMemo(
+    () =>
+      dataLastNews.map((item, index) => (
+        <div key={index} className={scss.lastNews__images}>
+          <Image
+            src={item.image}
+            alt="error"
+            className={scss.lastNews__image}
+          />
+          <p>{item.text}</p>
+        </div>
+      )),
+    []
+  );
   return (
     <div className={scss.lastNews__container}>
       <h3>Последние новости</h3>
-      <div className={scss.lastNews__bloc}>
-        {dataLastNews.map((item, index) => (
-          <div key={index} className={scss.lastNews__images}>
-            <Image
-              src={item.image}
-              alt="error"
-              className={scss.lastNews__image}
-            />
-            <p>{item.text}</p>
-          </div>
-        ))}
-      </div>
+      <div className={scss.lastNews__bloc}>{dataLastNews1}</div>
       <button>все новости</button>
     </div>
   );
