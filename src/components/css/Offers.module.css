@@ -12,7 +12,7 @@
   position: absolute;
   left: 45%;
   font-size: 18px;
-  margin-top: 40px;
+  margin-top: 25px;
   width: 170px;
   height: 40px;
   text-align: center;
@@ -31,25 +31,16 @@
   justify-content: space-between;
   border-radius: 18px;
 }
-.offers_bg .images .offers_title {
-  position: absolute;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 60px;
-  color: #414141;
-  margin-top: 20px;
-  left: 37%;
-}
 .offers_bg .images .img_col_left {
   margin-right: 20px;
-  margin-top: 90px;
+  margin-top: 25px;
 }
 .offers_bg .images .img_col_right {
   margin-left: 20px;
-  margin-top: 90px;
+  margin-top: 25px;
 }
 .offers_bg .images .img_col_center {
-  margin-top: 90px;
+  margin-top: 25px;
 }
 .offers_bg .images .img1,
 .offers_bg .images .img2,

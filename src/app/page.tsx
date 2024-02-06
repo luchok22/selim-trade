@@ -1,14 +1,11 @@
 import Offers from "@/components/Offers/Offers";
 import OurTeam from "@/components/OurTeam/OurTeam";
-import ReusableComponent from "@/components/ReusableComponent/ReusableComponent";
 
 export default function Home() {
   return (
     <>
-      <ReusableComponent title=" ">
-        <OurTeam />
-        <Offers />
-      </ReusableComponent>
+      <OurTeam />
+      <Offers />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import scss from "./Offers.module.scss";
+import ReusableComponent from "../ReusableComponent/ReusableComponent";
 import img1 from "/src/assets/Offers/image_1.jpg";
 import img3 from "/src/assets/Offers/image_3.jpg";
 import img2 from "/src/assets/Offers/image_2.jpg";
@@ -10,9 +11,8 @@ import img5 from "/src/assets/Offers/image_5.jpg";
 const Offers = () => {
   return (
     <div className={scss.offers_bg}>
-      <div className="container">
+      <ReusableComponent title="Мы предлагаем">
         <div className={scss.images}>
-          <h2 className={scss.offers_title}>Мы предлагаем</h2>
           <div className={scss.img_col_left}>
             <Image
               src={img1}
@@ -73,7 +73,7 @@ const Offers = () => {
         <div className="btn_blue">
           <button className={scss.see_all}>Смотреть все</button>
         </div>
-      </div>
+      </ReusableComponent>
     </div>
   );
 };
