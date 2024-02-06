@@ -1,0 +1,41 @@
+@import "../../app/globalVariables.scss";
+
+.service__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  background-image: url("../../assets/servis/back.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom 20% right 50%;
+  height: 70vh;
+  h3 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .service__blok {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .service__card {
+      text-align: center;
+      width: 20%;
+      height: 150px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: -1px -1px 5px 5px rgba(34, 60, 80, 0.26);
+      border-radius: 20px;
+      cursor: pointer;
+      background-color: $white;
+
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
