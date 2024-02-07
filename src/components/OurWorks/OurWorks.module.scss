@@ -1,42 +1,37 @@
-@import '../../app/globalVariables.scss';
-.carousel {
-    padding-top: 50px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    column-gap: 25px;
-    
+@import "../../app/globalVariables.scss";
+
+.carouselInner {
+  display: flex;
+  justify-content: center;
 }
-.main_picture {
-    display: flex;
-    column-gap: 10px;
+
+.mainPicture {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 50px;
 }
-.carousel_inner {
-    padding: 10px 15px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center; 
 
-    img {
-        border-radius: 20px; 
-        
-    }
+.imageButton {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.imageButton:hover {
+  transform: scale(1.1);
+}
+.imageButton.left {
+  left: 470px;
+}
 
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        outline: none;
+.imageButton.right {
+  right: 470px;
+}
 
-        img {
-            width: 45px;
-            height: 45px;
-            transition: transform 0.3s ease-in-out;
-        }
+.imageWrapper {
+  margin: 0 58px;
 
-        &:hover img {
-            transform: scale(1.2); 
-        }
-    }
+  img {
+    border-radius: 20px;
+  }
 }
