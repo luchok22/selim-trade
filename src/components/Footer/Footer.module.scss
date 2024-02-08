@@ -1,0 +1,82 @@
+@import "../../app/globalVariables.scss";
+
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+
+  .navbar {
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(249, 249, 249, 1);
+    color: $black;
+    border-radius: 35px;
+
+    .nav__container {
+      display: flex;
+
+      
+      width: 80%;
+
+      .left_side {
+        padding-left: 59px;
+        padding-top: 31px;
+        width: 250px;
+
+        .socialText {
+          padding-top: 142px;
+        
+        }
+      }
+      .social {
+        display: flex;
+        column-gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 31px;
+      }
+
+      .nav__ul {
+        padding-left: 70px;
+        padding-top: 41px;
+
+        // justify-content: space-between;
+        // align-items: center;
+        // width: 50%;
+
+        li {
+          text-decoration: none;
+          transition: text-decoration 0.5s ease-in-out;
+          cursor: pointer;
+          padding-bottom: 15px;
+        }
+        li:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .contacts {
+        padding-top: 41px;
+        padding-left: 95px;
+        width: 266px;
+      
+        .up_side{
+         
+            padding-bottom: 30px;
+            
+        }
+        .down_side {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 40px;
+          
+        }
+      }
+      .maps_navigation{
+        padding-top: 31px;
+        padding-left: 61px;
+      }
+  }
+}
