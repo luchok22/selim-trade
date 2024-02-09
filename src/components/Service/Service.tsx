@@ -5,6 +5,7 @@ import icon1 from "../../assets/servis/servis1.svg";
 import icon2 from "../../assets/servis/servis2.svg";
 import icon3 from "../../assets/servis/servis3.svg";
 import icon4 from "../../assets/servis/servis4.svg";
+import Reviews from "../Reviews/Reviews";
 
 const Service = () => {
   const serviceData = [
@@ -41,6 +42,7 @@ const Service = () => {
     <div className={scss.service__container}>
       <h3>Сервис</h3>
       <div className={scss.service__blok}>{iconData}</div>
+      <Reviews />
     </div>
   );
 };
