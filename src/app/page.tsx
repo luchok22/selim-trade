@@ -1,5 +1,5 @@
-import Main from "@/components/Main/Main";
-import LastNews from "@/components/LastNews/LastNews";
+import Advantages from "@/components/Advantages/Advantages";
+import OurWorks from "@/components/OurWorks/OurWorks";
 import OurTeam from "@/components/OurTeam/OurTeam";
 import Navbar from "@/components/navbar/Navbar";
 import Form from "@/components/Form/Form";
