@@ -42,7 +42,7 @@ const Service = () => {
     <div className={scss.service__container}>
       <h3>Сервис</h3>
       <div className={scss.service__blok}>{iconData}</div>
-      <Reviews />
+      {/* <Reviews /> */}
     </div>
   );
 };
