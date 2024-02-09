@@ -4,13 +4,11 @@ import OurTeam from "@/components/OurTeam/OurTeam";
 import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
-    <> 
-   
-    <OurTeam/>
+    <>
+      <OurTeam />
       <Advantages />
       <OurWorks />
-      <Footer/>
-   
+      <Footer />
     </>
   );
 }

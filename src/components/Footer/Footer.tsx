@@ -7,14 +7,16 @@ import map from "../../assets/Footer/map.png"
 import Link from "next/link";
 import Image from "next/image";
 
+const current_year = new Date().getFullYear();
+
 const Footer: FC = () => {
   const menuItems = [
     { title: "Главная", url: "/" },
-    { title: "О нас", url: "/services" },
+    { title: "О нас", url: "/AboutUs" },
     { title: "Услуги", url: "/services" },
-    { title: "Работы", url: "/news" },
-    { title: "Отзывы", url: "/WeWork" },
-    { title: "Новости", url: "/WeWork" },
+    { title: "Работы", url: "/Work" },
+    { title: "Отзывы", url: "/Reviews" },
+    { title: "Новости", url: "/News" },
   ];
   const menuItemsMap = useMemo(
     () =>
@@ -25,11 +27,12 @@ const Footer: FC = () => {
       )),
     []
   );
+  
 
   return (
-    <nav className={scss.nav}>
-      <div className={scss.navbar}>
-        <div className={scss.nav__container}>
+    <footer className={scss.footer}>
+      <div className={scss.footer__inner}>
+        <div className={scss.footer__container}>
           <div className={scss.left_side}>
             <Image src={logo} alt="logo" width={100} />
             <p className={scss.socialText}>СОЦИАЛЬНЫЕ СЕТИ</p>
@@ -48,7 +51,7 @@ const Footer: FC = () => {
               </Link>
             </div>
           </div>
-          <ul className={scss.nav__ul}>{menuItemsMap}</ul>
+          <ul className={scss.footer__ul}>{menuItemsMap}</ul>
           <div className={scss.contacts}>
             <div className={scss.up_side}>
                 <p>РЕЖИМ РАБОТЫ</p>
@@ -72,7 +75,11 @@ const Footer: FC = () => {
           </div>
         </div>
       </div>
-    </nav>
+      <div className={scss.footerStripe}>
+    <p>© {current_year} Selim Trade. Данный сайт защищён от копирования. Любая передача данных в интернете запрещена.</p>
+  </div>
+    </footer>
+    
   );
 };
 

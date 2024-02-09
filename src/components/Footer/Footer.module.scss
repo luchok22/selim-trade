@@ -1,25 +1,27 @@
 @import "../../app/globalVariables.scss";
 
-.nav {
+.footer {
   display: flex;
+  position: relative;
+  z-index: 2;
+
   justify-content: center;
   width: 100%;
   margin-top: 15px;
 
-  .navbar {
-    // display: flex;
+  .footer__inner {
+    margin: 0 auto;
+    background: rgba(249, 249, 249, 1) url("../../assets/Footer/map-pin.png")
+      no-repeat;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: rgba(249, 249, 249, 1);
     color: $black;
     border-radius: 35px;
+    background-position: 59% 50%;
 
-    .nav__container {
+    .footer__container {
       display: flex;
-
-      
-      width: 80%;
 
       .left_side {
         padding-left: 59px;
@@ -28,7 +30,7 @@
 
         .socialText {
           padding-top: 142px;
-        
+          font-weight: 500;
         }
       }
       .social {
@@ -38,13 +40,10 @@
         padding-bottom: 31px;
       }
 
-      .nav__ul {
+      .footer__ul {
         padding-left: 70px;
         padding-top: 41px;
-
-        // justify-content: space-between;
-        // align-items: center;
-        // width: 50%;
+        font-weight: 500;
 
         li {
           text-decoration: none;
@@ -58,25 +57,51 @@
       }
     }
     .contacts {
-        padding-top: 41px;
-        padding-left: 95px;
-        width: 266px;
-      
-        .up_side{
-         
-            padding-bottom: 30px;
-            
+      padding-top: 41px;
+      padding-left: 148px;
+      width: 313px;
+
+      .up_side {
+        padding-bottom: 30px;
+        text-align: right;
+        font-weight: 500;
+      }
+      .down_side {
+        display: flex;
+        font-weight: 500;
+        text-align: center;
+        flex-direction: column;
+        padding-bottom: 40px;
+        p {
+          padding-bottom: 10px;
         }
-        .down_side {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 40px;
-          
+        a {
+          padding-bottom: 10px;
         }
       }
-      .maps_navigation{
-        padding-top: 31px;
-        padding-left: 61px;
-      }
+    }
+    .maps_navigation {
+      padding-top: 31px;
+      padding-left: 170px;
+    }
+  }
+  .footerStripe {
+    position: absolute;
+    height: 126px;
+    bottom: -39px;
+    left: 0;
+    width: 100%;
+    background-color: $color2;
+    padding: 10px;
+    text-align: left;
+    z-index: -1;
+    border-radius: 20px;
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      color: rgba(241, 246, 255, 1);
+      padding-top: 85px;
+      padding-left: 39px;
+    }
   }
 }
