@@ -34,6 +34,10 @@
   @apply bg-back bg-cover bg-center;
   height: 100vh;
 }
+.form_back{
+  @apply bg-form bg-cover bg-center;
+  height: 100vh;
+}
 
 @layer utilities {
   .text-balance {
