@@ -9,15 +9,12 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom 20% right 50%;
-  h3 {
-    font-size: 40px;
-    font-weight: bold;
-  }
+
   .service__blok {
     margin-top: 30px;
-    width: 100%;
+    width: 90vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .service__card {
       text-align: center;

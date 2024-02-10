@@ -5,6 +5,7 @@ import icon1 from "../../assets/servis/servis1.svg";
 import icon2 from "../../assets/servis/servis2.svg";
 import icon3 from "../../assets/servis/servis3.svg";
 import icon4 from "../../assets/servis/servis4.svg";
+import ReusableComponent from "../ReusableComponent/ReusableComponent";
 
 const Service = () => {
   const serviceData = [
@@ -39,8 +40,9 @@ const Service = () => {
 
   return (
     <div className={scss.service__container}>
-      <h3>Сервис</h3>
-      <div className={scss.service__blok}>{iconData}</div>
+      <ReusableComponent title="Сервис">
+        <div className={scss.service__blok}>{iconData}</div>
+      </ReusableComponent>
     </div>
   );
 };
