@@ -105,12 +105,13 @@ const Reviews = () => {
             width={50}
             style={{ cursor: "pointer" }}
             onClick={() => paginate(currentPage - 1)}
+            className={scss.reviewsVec1}
           />
           <Image
             src={vector2}
             alt="error"
             width={50}
-            style={{ cursor: "pointer" }}
+            className={scss.reviewsVec1}
             onClick={() => paginate(currentPage + 1)}
           />
         </div>

@@ -5,20 +5,21 @@ import Service from "@/components/Service/Service";
 import Reviews from "@/components/Reviews/Reviews";
 import Navbar from "@/components/navbar/Navbar";
 import Form from "@/components/Form/Form";
+import LastNews from "@/components/LastNews/LastNews";
 export default function Home() {
   return (
     <>
       <div className="main_back">
         <Navbar />
-        <Main />
+        {/* <Main /> */}
       </div>
       <OurTeam />
-      <LastNews />
       <Advantages />
+      <LastNews />
       <OurWorks />
       <Service />
-      <Reviews />
       <div className="form_back">
+        <Reviews />
         <Form />
       </div>
     </>
